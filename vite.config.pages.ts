@@ -5,11 +5,10 @@ import path from 'path';
 export default defineConfig({
   plugins: [react()],
   base: '/algerian-agricultural-prices/',
+  root: './client',
   build: {
-    outDir: 'dist',
-    rollupOptions: {
-      input: './client/index.html',
-    },
+    outDir: '../dist',
+    emptyOutDir: true,
   },
   resolve: {
     alias: {
