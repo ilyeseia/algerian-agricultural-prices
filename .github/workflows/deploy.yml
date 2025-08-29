@@ -34,6 +34,7 @@ jobs:
     - name: Build for production
       run: |
         npm run build
+        ls -la dist/
         
     - name: Setup Pages
       uses: actions/configure-pages@v4
