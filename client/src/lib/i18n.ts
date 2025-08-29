@@ -1,0 +1,75 @@
+export const translations = {
+  ar: {
+    dashboard: "لوحة القيادة",
+    prices: "الأسعار",
+    reports: "التقارير",
+    settings: "الإعدادات",
+    exportData: "تصدير البيانات",
+    totalProducts: "إجمالي المنتجات",
+    activeWilayas: "الولايات النشطة",
+    lastUpdate: "آخر تحديث",
+    averagePrice: "متوسط السعر",
+    searchProduct: "البحث عن منتج...",
+    allWilayas: "جميع الولايات",
+    allCategories: "جميع الفئات",
+    marketType: "نوع السوق",
+    applyFilter: "تطبيق الفلتر",
+    vegetables: "خضروات",
+    fruits: "فواكه",
+    wholesale: "جملة",
+    retail: "تجزئة",
+    product: "المنتج",
+    wilaya: "الولاية",
+    price: "السعر",
+    change: "التغيير",
+    loading: "جاري التحميل...",
+    error: "حدث خطأ",
+    addProduct: "إضافة منتج جديد",
+    bulkUpdate: "تحديث مجمّع",
+    exportReport: "تصدير تقرير",
+    systemStatus: "حالة النظام",
+    active: "نشط",
+    connected: "متصل",
+    paused: "متوقف مؤقتاً"
+  },
+  en: {
+    dashboard: "Dashboard",
+    prices: "Prices",
+    reports: "Reports",
+    settings: "Settings",
+    exportData: "Export Data",
+    totalProducts: "Total Products",
+    activeWilayas: "Active Wilayas",
+    lastUpdate: "Last Update",
+    averagePrice: "Average Price",
+    searchProduct: "Search for product...",
+    allWilayas: "All Wilayas",
+    allCategories: "All Categories",
+    marketType: "Market Type",
+    applyFilter: "Apply Filter",
+    vegetables: "Vegetables",
+    fruits: "Fruits",
+    wholesale: "Wholesale",
+    retail: "Retail",
+    product: "Product",
+    wilaya: "Wilaya",
+    price: "Price",
+    change: "Change",
+    loading: "Loading...",
+    error: "An error occurred",
+    addProduct: "Add New Product",
+    bulkUpdate: "Bulk Update",
+    exportReport: "Export Report",
+    systemStatus: "System Status",
+    active: "Active",
+    connected: "Connected",
+    paused: "Paused"
+  }
+};
+
+export type Language = keyof typeof translations;
+export type TranslationKey = keyof typeof translations.ar;
+
+export const t = (key: TranslationKey, lang: Language = 'ar'): string => {
+  return translations[lang][key] || key;
+};
